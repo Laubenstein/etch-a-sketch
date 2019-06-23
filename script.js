@@ -14,8 +14,11 @@ function makeGrid(gridSize) {
     }
     return;
 }
-
-document.getElementsByClassName("gridDiv").addEventListener("hover", changeColor();)
 function changeColor() {
-    document.getElementsByClassName("gridDiv").element.style.backgroundColor = "red";
+    this.style.backgroundColor = "black";
+    return;
+}
+
+for (var i = 0; i < gridDiv.length; i++) {
+    gridDiv[i].addEventListener("mouseover", changeColor, false);
 }
