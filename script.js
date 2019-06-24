@@ -1,21 +1,27 @@
 const gridContainer = document.querySelector("#gridContainer");
-//gridDiv.classList.add("gridDiv");
+//gridCell.classList.add("gridCell");
 let createDiv;
-let gridMaker = makeGrid(64);
-let gridDiv = document.getElementsByClassName("gridDiv");
+let gridMaker = makeGrid(12);
+let gridCell = document.getElementsByClassName("gridCell");
 
 
 
-function makeGrid(gridSize) {
-    for (let i = 0; i < gridSize; i++) {
+function makeGrid(cells) {
+    gridContainer.style.gridTemplateColumns = `repeat(${cells}, 1fr)`;
+    gridContainer.style.gridTemplateRows = `repeat(${cells}, 1fr)`;
+    for (let i = 0; i < cells*cells; i++) {
         createDiv = document.createElement("div");
+        createDiv.classList.add("gridCell");
+        createDiv.addEventListener("mouseover", function(e) {
+            changeColor(e.target);
+        })
         gridContainer.appendChild(createDiv);
-        createDiv.classList.add("gridDiv");
+        
     }
     return;
 }
-function changeColor() {
-    this.style.backgroundColor = "black";
+function changeColor(target) {
+    target.style.backgroundColor = "black";
     return;
 }
 function resetGrid() {
@@ -28,10 +34,6 @@ function resetGrid() {
     return;
 }
 
-//add event listener for each grid element
-//Does not work for dynamically added elements! Better use Event delegation.
-for (var i = 0; i < gridDiv.length; i++) {
-    gridDiv[i].addEventListener("mouseover", changeColor, false);
-}
+
 
 document.getElementById("reset").addEventListener("click", resetGrid, false);
