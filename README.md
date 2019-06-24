@@ -13,4 +13,6 @@ Work in progress!
 - [ ] Toggle random color mode
 - [ ] Clear colored cells
 
-- [ ] Make the whole thing pretty
+### Optional stuff
+
+- [ ] Make the whole thing look pretty
