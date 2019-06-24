@@ -7,7 +7,10 @@ Work in progress!
 
 - [x] With JavaScript DOM manipulation: Make a grid of cells, which change color on mouseover.
 
-Additionally, there should be 3 buttons:
+### Additionally, there should be 3 buttons:
+
 - [x] Reset Grid, prompt user for new Grid size
 - [ ] Toggle random color mode
 - [ ] Clear colored cells
+
+- [ ] Make the whole thing pretty
