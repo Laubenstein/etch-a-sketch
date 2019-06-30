@@ -1,7 +1,7 @@
 const gridContainer = document.querySelector("#gridContainer");
 //gridCell.classList.add("gridCell");
 let createDiv;
-let gridMaker = makeGrid(12);
+let gridMaker = makeGrid(32);
 let gridCell = document.getElementsByClassName("gridCell");
 
 
@@ -21,7 +21,7 @@ function makeGrid(cells) {
     return;
 }
 function changeColor(target) {
-    target.style.backgroundColor = "black";
+    target.style.backgroundColor = "#8F8EBF";
     return;
 }
 function resetGrid() {

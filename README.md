@@ -15,4 +15,4 @@ Work in progress!
 
 ### Optional stuff
 
-- [ ] Make the whole thing look pretty
+- [x] Make the whole thing look pretty
